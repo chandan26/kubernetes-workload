@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: secapp-daemonset-demo
+
+spec:
+  selector:
+    matchLabels:
+       app: nginx-pod
+  updateStrategy:
+    rollingUpdate:
+      maxUnavailable: 1
+  template: 
+    metadata: 
+      labels: 
+        app: nginx-pod
+    spec: 
+      containers: 
+      - name: nginx-pod
+        image: nginx
+    
