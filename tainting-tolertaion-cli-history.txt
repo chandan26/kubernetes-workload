@@ -1,0 +1,328 @@
+    1  kubectl get po
+    2  ip addr
+    3  kubeadm init --apiserver-advertise-address=10.190.0.5 --pod-network-cidr=192.168.0.0/16
+    4  kubeadm init --apiserver-advertise-address=10.190.0.16 --pod-network-cidr=192.168.0.0/16
+    5   mkdir -p $HOME/.kube
+    6  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    7  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+    8   kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+    9  kubectl get no
+   10  systemctl status kubectl
+   11  history 
+   12  rpm -qa | grep kubectl
+   13  rpm -qa | grep kube
+   14  kubectl get no
+   15  kubectl get no
+   16  kubectl delete svc, pod --all
+   17  kubectl delete svc,pod --all
+   18  kubectl get svc
+   19  ll
+   20  cd /
+   21  ll
+   22  kubectl get po
+   23  history 
+   24  kubectl get no -o wide
+   25  mkdir k8's-self-paced
+   26  cd
+   27  mkdir k8s-self-paced
+   28  ll
+   29  cd k8s-self-paced/
+   30  ll
+   31  yum install git -y
+   32  yum install -y bash-completion
+   33  source /etc/profile.d/bash_completion.sh
+   34  source <(kubectl completion bash)
+   35  kubectl completion bash >/etc/bash_completion.d/kubectl
+   36  echo 'alias k=kubectl' >>~/.bashrc
+   37  echo 'complete -F __start_kubectl k' >>~/.bashrc
+   38  source /usr/share/bash-completion/bash_completion
+   39  k get nodes
+   40  exit
+   41  k get nodes 
+   42  vi deployment.yaml
+   43  kubectl create -f deployment.yaml 
+   44  vi deployment.yaml
+   45  kubectl create -f deployment.yaml 
+   46  vi deployment.yaml
+   47  kubectl create -f deployment.yaml 
+   48  vi deployment.yaml
+   49  kubectl create -f deployment.yaml 
+   50  vi deployment.yaml
+   51  kubectl create -f deployment.yaml 
+   52  cat deployment.yaml 
+   53  vi deployment.yaml 
+   54  kubectl create -f deployment.yaml 
+   55  vi deployment.yaml 
+   56  kubectl create -f deployment.yaml 
+   57  ll
+   58  cd k8s-self-paced/
+   59  ll
+   60  cd
+   61  mv deployment.yaml /root/k8s-self-paced/
+   62  cd k8s-self-paced/
+   63  ll
+   64  cat deployment.yaml 
+   65  kubectl create -f deployment.yaml 
+   66  vi deployment.yaml 
+   67  cat deployment.yaml 
+   68  kubectl create -f deployment.yaml 
+   69  kubectl get po -o wide --show-labels 
+   70  git init
+   71  git add deployment.yaml
+   72  git commit -m "First Deployment yaml file"
+   73  git branch -M main
+   74  git remote add origin https://github.com/chandan26/kubernetes-workload.git
+   75  git push -u origin main
+   76  cp deployment.yaml /root/
+   77  cd 
+   78  ll
+   79  cd k8s-self-paced/
+   80  git pull
+   81  ll
+   82  git branch --set-upstream-to=origin/main
+   83  git pull
+   84  ll
+   85  git status
+   86  git push
+   87  ll
+   88  k get deploy
+   89  kubectl describe deployments
+   90  k get rs
+   91  k get rss --show-labels 
+   92  k get rs --show-labels 
+   93  cp deployment.yaml /root/deployment-maxavblty-surge-param.yaml
+   94  mv /root/deployment-maxavblty-surge-param.yaml /root/k8s-self-paced/
+   95  ll
+   96  vi deployment-maxavblty-surge-param.yaml 
+   97  k rollout history deployment nginx-app --revision=1
+   98  cat deployment-maxavblty-surge-param.yaml 
+   99  vi deployment.yaml 
+  100  kubectl replace deployment.yaml 
+  101  kubectl replace -f deployment.yaml 
+  102  cat deployment
+  103  cat deployment.yaml 
+  104  kubectl delete -f deployment.yaml 
+  105  vi deployment.yaml 
+  106  cat deployment
+  107  cat deployment.yaml 
+  108  kubectl replace -f deployment.yaml 
+  109  kubectl get po
+  110  kubectl get deployments
+  111  kubectl describe nginx-app
+  112  kubectl describe deployments.apps 
+  113  kubectl image deployment nginx-app nginx=apache
+  114  kubectl set image deployment nginx-app nginx=apache
+  115  kubectl get deployments -o wide
+  116  kubectl set image deployment nginx-app nginx-app=apache
+  117  kubectl get pod -A
+  118  k get rs
+  119  k rollout history deploy nginx-app
+  120  k rollout history deploy nginx-app --revision=2
+  121  k rollout undo deployment nginx-app
+  122  kubectl get po -A
+  123  k rollout undo deployment nginx --to-revision=1
+  124  k rollout undo deployment nginx-app --to-revision=1
+  125   k rollout history deployment nginx-app 
+  126  k rollout undo deployment nginx-app --to-revision=3
+  127  k rollout undo deployment nginx-app --to-revision=2
+  128  kubectl delete svc, ppod -all
+  129  kubectl delete svc, ppod --all
+  130  kubectl delete svc,pod --all
+  131  kubctl get po
+  132  k get po
+  133  kubectl delete -f deployment
+  134  kubectl delete -f deployment.yaml 
+  135  kubectl get po
+  136  kubctl get rs
+  137  k get rs
+  138  kubectl get po
+  139  k get svc
+  140  kubectl get po
+  141  kubectl get no
+  142  kubectl get po
+  143  kubectl get po -A
+  144  k get daemonsets
+  145   -A
+  146  k get daemonsets -A
+  147  k get daemonsets -A --show-labels 
+  148  k get po  --show-labels -A
+  149  k get po -o wide --show-labels -A 
+  150  k get po -o wide --show-labels -A --fit
+  151  k get po -o wide --show-labels -A 
+  152  clear
+  153  cd k8s-self-paced/
+  154  ll
+  155  yum install nano -y
+  156  clear
+  157  nano daemonset.yaml
+  158  ca daemonset.yaml 
+  159  cat daemonset.yaml 
+  160  k create -f daemonset.yaml 
+  161  cat daemonset.yaml 
+  162  nano daemonset.yaml
+  163  cat daemonset.yaml 
+  164  nano daemonset.yaml
+  165  k create -f daemonset.yaml 
+  166  nano daemonset.yaml
+  167  k create -f daemonset.yaml 
+  168  nano daemonset.yaml
+  169  clear 
+  170  k create -f daemonset.yaml 
+  171  kubectl get daemonsets.apps 
+  172  k describe secapp-daemonset-demo
+  173  k describe ds secapp-daemonset-demo
+  174  kubectl get resourcequotas 
+  175  kubectl get resources
+  176  kubectl get resourcequotas -n default
+  177  kubectl get namespaces 
+  178  kubectl get resourcequotas --namespace=default
+  179  kubectl get resourcequotas --namespace default
+  180  k describe namespaces default 
+  181  kubectl create namespace dev
+  182  kubectl get resourcequotas --namespace dev
+  183  kubectl create namespace --help
+  184  kubectl create resourcequotas --help
+  185  kubectl get po 
+  186  kubectl get po -o wide
+  187  kubectl describe daemonsets 
+  188  cat daemonset.yaml 
+  189  clear 
+  190  k edit daemonsets.apps secapp-daemonset-demo 
+  191  clear 
+  192  kubectl get daemonsets.apps 
+  193  k set image ds secapp-daemonset-demo sec=httpd
+  194  cat daemonset.yaml 
+  195  k set image ds secapp-daemonset-demo nginx-pod=httpd
+  196  k get pod 
+  197  k get pod --show-labels 
+  198  k rollout history 
+  199  k rollout history ds
+  200  k rollout history ds --revision=1
+  201  k rollout history ds --revision=2
+  202  k get pod --show-labels 
+  203  k get events -w
+  204  k get pod --show-labels 
+  205  k rollout history ds --revision=2
+  206  k get events -w
+  207  k get pods
+  208  history 
+  209  git add daemonset.yaml
+  210  git commit -m "daemon-set-yaml file and checks"
+  211  git status
+  212  git add deployment-maxavblty-surge-param.yaml
+  213  git commit -m "daemon-set-yaml file and checks"
+  214  git branch -M main
+  215  git remote add origin https://github.com/chandan26/kubernetes-workload.git
+  216  git push -u origin main
+  217  gi status
+  218  git status
+  219  k delete daemonsets -f daemonset.yaml 
+  220  k delete  -f daemonset.yaml 
+  221  kubectl get po -o wide
+  222  ll
+  223  cd 
+  224  ls -larth
+  225  cd k8s-self-paced/
+  226  ll
+  227  cat daemonset.yaml 
+  228  kubectl get po
+  229  kubectl create -f daemonset.yaml 
+  230  kubectl get po
+  231  cd k8s-self-paced/
+  232  ll
+  233  cat daemonset.yaml 
+  234  kubectl get po
+  235  kubectl delete -f daemonset.yaml 
+  236  kubectl get po
+  237  kubectl delete secapp-daemonset-demo-7n2fn
+  238  kubectl get po
+  239  kubectl get events
+  240  kubectl get po
+  241  cat /etc/cni/net.d/
+  242  ll
+  243  cd /etc/cni/net.d/
+  244  ll
+  245  cat calico-kubeconfig 
+  246  ll
+  247  cat 10-calico.conflist 
+  248  kubectl get po
+  249  kubectl delete -f secapp-daemonset-demo-7n2fn
+  250  kubectl get po -o wide
+  251  kubectl get po
+  252  kubectl delete svc, po --all
+  253  history 
+  254  kubectl get po -o wide -A
+  255  kubectl get po
+  256  kubectl get po -A
+  257  kubeadm reset
+  258  ip addr
+  259  kubeadm init --apiserver-advertise-address=10.190.0.16 --pod-network-cidr=192.168.0.0/16
+  260   mkdir -p $HOME/.kube
+  261  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  262  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+  263  kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+  264  kubectl get po -A
+  265  kubectl get no
+  266  kubectl get po -A
+  267  ll
+  268  cd k8
+  269  cd k8s-self-paced/
+  270  ll
+  271  kubectl create -f deployment.yaml 
+  272  kubectl get po -A
+  273  kubectl get po 
+  274  kubectl get nno
+  275  kubectl get no
+  276  kubectl get po -o wide
+  277  kubectl drain --help
+  278  kubectl get no
+  279  kubectl drain kube-worker-1
+  280  kubectl drain kube-worker-1 --ignore-daemonsets=true
+  281  kubectl get po
+  282  kubectl get po -o wide
+  283  kubectl uncordon kube-worker-1
+  284  kubectl get po -o wide
+  285  kubectl delete -f deployment.yaml
+  286  kubectl get po -o wide
+  287  kubectl create -f deployment.yaml 
+  288  kubectl get po -o wide
+  289  k get po
+  290  kubectl delete -f deployment.yaml
+  291  k get po
+  292  kubectl create -f deployment.yaml 
+  293  kubectl get po --show-labels 
+  294  kubectl get po --show-labels -o wide
+  295  k taint node kube-worker-2 app=nginx-app:NoSchedule
+  296  kubectl get po --show-labels -o wide
+  297  k run app2 --image=nginx --labels=app=nginx-app
+  298  kubectl get po --show-labels -o wide
+  299  k run app3 --image=nginx --labels=app=nginx-app
+  300  kubectl get po --show-labels -o wide
+  301  k taint node kube-worker-1 app=nginx-app:NoExecute
+  302  kubectl get po --show-labels -o wide
+  303  kubectl describe nginx-app-869cb77964-q85pk
+  304  kubectl describe po nginx-app-869cb77964-q85pk
+  305  vi taint-toleration.yaml
+  306  cat taint-toleration.yaml 
+  307  kubectl create -f taint-toleration.yaml 
+  308  vi taint-toleration.yaml
+  309  kubectl create -f taint-toleration.yaml 
+  310  kubectl get po -o wide
+  311  kubectl get no -o wide
+  312  kubectl describe no kube-worker-1
+  313  kubectl describe no kube-worker-2
+  314  k taint node kube-worker-2 app=
+  315  k taint node kube-worker-2 app-
+  316  k taint node kube-worker-app- 
+  317  k taint node kube-worker-1 app- 
+  318  kubectl get po -o wide --show-labels 
+  319  ls -lrth
+  320  kubectl create -f taint-toleration.yaml 
+  321  git add taint-toleration.yaml
+  322  git commit -m "taint-toleration yaml file for app=nginx pods the nodes are tained"
+  323  git status
+  324  git push
+  325  echo "untainting a node with the below command"
+  326  echo  "k taint node kube-worker-2 app-"
+  327  kubectl taint --help
+  328  history > tainting-tolertaion-cli-history.txt
