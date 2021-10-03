@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeselectordemo 
+spec:
+  nodeName: kube-worker-1
+  containers:
+  - name: nodeselectorcon
+    image: nginx
+    
+
